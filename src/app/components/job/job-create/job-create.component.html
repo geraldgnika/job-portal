@@ -1,0 +1,73 @@
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <h2>Create a new Job Offer</h2>
+      <p class="lead">
+        Create a new job offer and mind the Job Profile field, since job seekers
+        will search jobs with that keyword.
+      </p>
+    </div>
+
+    <div class="row g-5 w100">
+      <div class="col-md-7 col-lg-8 m-auto pt-3 pb-5 w70">
+        <h4 class="mb-3">Job Information</h4>
+        <div class="row g-3">
+          <div class="col-12">
+            <label for="address" class="form-label">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              name="title"
+              [(ngModel)]="title"
+            />
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-12">
+            <label for="address" class="form-label">Description</label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="description"
+              name="description"
+              [(ngModel)]="description"
+              rows="6"
+            ></textarea>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-12">
+            <label for="address" class="form-label">Salary</label>
+            <input
+              type="text"
+              class="form-control"
+              id="salary"
+              name="salary"
+              [(ngModel)]="salary"
+            />
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-12">
+            <label for="address" class="form-label">Job Profile</label>
+            <input
+              type="text"
+              class="form-control"
+              id="job_profile"
+              name="job_profile"
+              [(ngModel)]="job_profile"
+            />
+          </div>
+        </div>
+        <button
+          class="w-100 btn btn-primary btn-lg mt-4"
+          type="button"
+          (click)="create_job()"
+        >
+          Create Job
+        </button>
+      </div>
+    </div>
+  </main>
+</div>

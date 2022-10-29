@@ -1,0 +1,22 @@
+<div class="col-lg-8 mx-auto p-5 py-md-5">
+  <main>
+    <h1>{{ job.title }}</h1>
+    <p class="col-md-8 text-muted">Poster: {{ job.poster }}</p>
+    <p class="col-md-8 text-muted">Posted on: {{ job.created_at }}</p>
+    <p class="col-md-8 jobdesc">
+      {{ job.description }}
+    </p>
+    <p class="col-md-8 salary">Expected Salary: {{ job.salary }}</p>
+    <span class="col-md-8 jobprofile">
+      {{ job.job_profile }}
+    </span>
+
+    <div class="d-flex">
+      <div class="mb-5">
+        <span class="btn btn-outline-secondary btn-lg px-4" (click)="goBack()"
+          >Go Back</span
+        >
+      </div>
+    </div>
+  </main>
+</div>

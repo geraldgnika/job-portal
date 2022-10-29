@@ -1,0 +1,32 @@
+.headerdiv {
+  background-color: #cbcbcb;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.coldiv {
+  background-color: #efefef;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.wfit {
+  width: fit-content;
+}
+
+.bigactdiv {
+  display: inline-flex;
+  width: auto;
+  margin-left: auto;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mr10 {
+  margin-right: 10px;
+}

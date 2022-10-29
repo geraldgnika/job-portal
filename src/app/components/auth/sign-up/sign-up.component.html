@@ -1,0 +1,84 @@
+<main class="form-signin w-50 m-auto mt-0 mb-5">
+  <img class="logo mt-5" src="assets/logo.png" />
+  <h4 class="text-center mb-4 fw-normal">Sign up for an account</h4>
+
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control formControl"
+      id="floatingInput"
+      placeholder="First Name"
+      #fname
+      required
+    />
+    <label for="floatingInput">First Name</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control formControl"
+      id="floatingInput"
+      placeholder="Last Name"
+      #lname
+      required
+    />
+    <label for="floatingInput">Last Name</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      type="email"
+      class="form-control formControl"
+      id="floatingInput"
+      placeholder="Email address"
+      #email
+      required
+    />
+    <label for="floatingInput">Email address</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      class="form-control formControl"
+      id="floatingPassword"
+      type="password"
+      placeholder="Password"
+      #password
+      required
+    />
+    <label for="floatingPassword">Password</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        value="true"
+        #role
+        name="role"
+        id="role"
+      />
+      <label class="form-check-label" for="flexCheckDefault">
+        I am a Recruiter.
+      </label>
+    </div>
+  </div>
+
+  <button
+    class="w-100 btn btn-lg btn-primary"
+    type="submit"
+    (click)="
+      authService.sign_up(
+        email.value,
+        password.value,
+        fname.value,
+        lname.value,
+        role.value
+      )
+    "
+  >
+    Sign up
+  </button>
+  <p class="mt-5 mb-3 text-muted text-center">
+    Already have an account? <a routerLink="/auth/sign-in">Sign In</a>
+  </p>
+</main>

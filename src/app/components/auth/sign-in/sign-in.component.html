@@ -1,0 +1,38 @@
+<main class="form-signin w-50 m-auto mt-0 mb-5">
+  <img class="logo mt-5" src="assets/logo.png" />
+  <h4 class="text-center mb-4 fw-normal">Sign in to your account</h4>
+
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control formControl"
+      id="floatingInput"
+      placeholder="Email address"
+      #email
+      required
+    />
+    <label for="floatingInput">Email address</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input
+      class="form-control formControl"
+      id="floatingPassword"
+      type="password"
+      placeholder="Password"
+      #password
+      required
+    />
+    <label for="floatingPassword">Password</label>
+  </div>
+
+  <button
+    class="w-100 btn btn-lg btn-primary"
+    type="submit"
+    (click)="authService.sign_in(email.value, password.value)"
+  >
+    Sign in
+  </button>
+  <p class="mt-5 mb-3 text-muted text-center">
+    Don't have an account? <a routerLink="/auth/sign-up">Sign Up</a>
+  </p>
+</main>

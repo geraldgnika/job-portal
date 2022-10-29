@@ -1,0 +1,118 @@
+<div class="row rowcls" *ngIf="authService.userObject as user">
+  <main role="main" class="px-0">
+    <div class="position-relative overflow-hidden text-center bg-of-main mrl0">
+      <div class="col-md-5 p-lg-5 mx-auto mr-5 ml-5">
+        <div>
+          <img
+            class="align-self-start mb-3 img-thumbnail rounded-circle heightofimg"
+            src="/assets/user.png"
+          />
+        </div>
+        <h2 class="fw-normal">
+          Hello {{ user.displayName ? user.displayName : "User" }}
+        </h2>
+        <span class="lead fw-normal d-block f17">{{ user.email }}</span>
+        <span
+          class="lead fw-normal text-muted f16"
+          *ngIf="authService.authedUser.role"
+        >
+          Role: {{ authService.authedUser.role }}
+        </span>
+      </div>
+    </div>
+
+    <div *ngIf="authService.authedUser.role == 'seeker'">
+      <div class="container mt-4 mb-4" *ngIf="appliedJobsList.length != 0">
+        <div class="row mb-3 text-center">
+          <h3>Applied Jobs</h3>
+        </div>
+
+        <div class="row mb-3 text-center headerdiv">
+          <div class="col-2 themed-grid-col">Title</div>
+          <div class="col-3 themed-grid-col">Description</div>
+          <div class="col-2 themed-grid-col">Salary</div>
+          <div class="col-2 themed-grid-col">Job Profile</div>
+          <div class="col-3 themed-grid-col">Actions</div>
+        </div>
+
+        <div
+          class="row mb-3 text-center coldiv"
+          *ngFor="let appliedJob of appliedJobsList"
+        >
+          <div class="col-2 themed-grid-col truncate">
+            {{ appliedJob.title }}
+          </div>
+          <div class="col-3 themed-grid-col truncate">
+            {{ appliedJob.description }}
+          </div>
+          <div class="col-2 themed-grid-col truncate">
+            {{ appliedJob.salary }}
+          </div>
+          <div class="col-2 themed-grid-col truncate">
+            {{ appliedJob.job_profile }}
+          </div>
+          <div class="col-3 themed-grid-col bigactdiv">
+            <div class="wfit">
+              <button
+                class="btn btn-outline-success mr10"
+                (click)="detail_job(appliedJob.id)"
+              >
+                Open
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-4 mb-4" *ngIf="favoriteJobsList.length != 0">
+        <div class="row mb-3 text-center">
+          <h3>Favorite Jobs</h3>
+        </div>
+
+        <div class="row mb-3 text-center headerdiv">
+          <div class="col-2 themed-grid-col">Title</div>
+          <div class="col-3 themed-grid-col">Description</div>
+          <div class="col-2 themed-grid-col">Salary</div>
+          <div class="col-2 themed-grid-col">Job Profile</div>
+          <div class="col-3 themed-grid-col">Actions</div>
+        </div>
+
+        <div
+          class="row mb-3 text-center coldiv"
+          *ngFor="let favoriteJob of favoriteJobsList"
+        >
+          <div class="col-2 themed-grid-col truncate">
+            {{ favoriteJob.title }}
+          </div>
+          <div class="col-3 themed-grid-col truncate">
+            {{ favoriteJob.description }}
+          </div>
+          <div class="col-2 themed-grid-col truncate">
+            {{ favoriteJob.salary }}
+          </div>
+          <div class="col-2 themed-grid-col truncate">
+            {{ favoriteJob.job_profile }}
+          </div>
+          <div class="col-3 themed-grid-col bigactdiv">
+            <div class="wfit">
+              <button
+                class="btn btn-outline-success mr10"
+                (click)="detail_job(favoriteJob.id)"
+              >
+                Open
+              </button>
+            </div>
+            <div class="wfit">
+              <button
+                class="btn btn-outline-info mr10"
+                (click)="apply_job(favoriteJob.id)"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
