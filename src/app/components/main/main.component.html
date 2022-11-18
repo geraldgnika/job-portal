@@ -3,19 +3,13 @@
     <div class="position-relative overflow-hidden text-center bg-of-main mrl0">
       <div class="col-md-5 p-lg-5 mx-auto mr-5 ml-5">
         <div>
-          <img
-            class="align-self-start mb-3 img-thumbnail rounded-circle heightofimg"
-            src="/assets/user.png"
-          />
+          <img class="align-self-start mb-3 img-thumbnail rounded-circle heightofimg" src="/assets/user.png" />
         </div>
         <h2 class="fw-normal">
           Hello {{ user.displayName ? user.displayName : "User" }}
         </h2>
         <span class="lead fw-normal d-block f17">{{ user.email }}</span>
-        <span
-          class="lead fw-normal text-muted f16"
-          *ngIf="authService.authedUser.role"
-        >
+        <span class="lead fw-normal text-muted f16" *ngIf="authService.authedUser.role">
           Role: {{ authService.authedUser.role }}
         </span>
       </div>
@@ -35,10 +29,7 @@
           <div class="col-3 themed-grid-col">Actions</div>
         </div>
 
-        <div
-          class="row mb-3 text-center coldiv"
-          *ngFor="let appliedJob of appliedJobsList"
-        >
+        <div class="row mb-3 text-center coldiv" *ngFor="let appliedJob of appliedJobsList">
           <div class="col-2 themed-grid-col truncate">
             {{ appliedJob.title }}
           </div>
@@ -53,10 +44,7 @@
           </div>
           <div class="col-3 themed-grid-col bigactdiv">
             <div class="wfit">
-              <button
-                class="btn btn-outline-success mr10"
-                (click)="detail_job(appliedJob.id)"
-              >
+              <button class="btn btn-outline-success mr10" (click)="detail_job(appliedJob.id)">
                 Open
               </button>
             </div>
@@ -77,10 +65,7 @@
           <div class="col-3 themed-grid-col">Actions</div>
         </div>
 
-        <div
-          class="row mb-3 text-center coldiv"
-          *ngFor="let favoriteJob of favoriteJobsList"
-        >
+        <div class="row mb-3 text-center coldiv" *ngFor="let favoriteJob of favoriteJobsList">
           <div class="col-2 themed-grid-col truncate">
             {{ favoriteJob.title }}
           </div>
@@ -95,18 +80,12 @@
           </div>
           <div class="col-3 themed-grid-col bigactdiv">
             <div class="wfit">
-              <button
-                class="btn btn-outline-success mr10"
-                (click)="detail_job(favoriteJob.id)"
-              >
+              <button class="btn btn-outline-success mr10" (click)="detail_job(favoriteJob.id)">
                 Open
               </button>
             </div>
             <div class="wfit">
-              <button
-                class="btn btn-outline-info mr10"
-                (click)="apply_job(favoriteJob.id)"
-              >
+              <button class="btn btn-outline-info mr10" (click)="apply_job(favoriteJob.id)">
                 Apply
               </button>
             </div>

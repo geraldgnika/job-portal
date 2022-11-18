@@ -1,12 +1,8 @@
 <main>
   <div class="container mt-4 mb-4">
     <div class="row mb-3 text-center mt-3">
-      <input
-        [(ngModel)]="jobTitleFilter"
-        class="form-control"
-        (keyup)="filterTitles()"
-        placeholder="Search Jobs by Job Title or Job Profile..."
-      />
+      <input [(ngModel)]="jobTitleFilter" class="form-control" (keyup)="filterTitles()"
+        placeholder="Search Jobs by Job Title or Job Profile..." />
     </div>
 
     <div class="row mb-3 text-center">
@@ -30,26 +26,17 @@
       </div>
       <div class="col-3 themed-grid-col bigactdiv">
         <div class="wfit">
-          <button
-            class="btn btn-outline-success mr10"
-            (click)="detail_job(job.id)"
-          >
+          <button class="btn btn-outline-success mr10" (click)="detail_job(job.id)">
             Open
           </button>
         </div>
         <div class="wfit" *ngIf="authService.authedUser.role == 'seeker'">
-          <button
-            class="btn btn-outline-primary mr10"
-            (click)="apply_job(job.id)"
-          >
+          <button class="btn btn-outline-primary mr10" (click)="apply_job(job.id)">
             Apply
           </button>
         </div>
         <div class="wfit" *ngIf="authService.authedUser.role == 'seeker'">
-          <button
-            class="btn btn-outline-warning mr10"
-            (click)="favorite_job(job.id)"
-          >
+          <button class="btn btn-outline-warning mr10" (click)="favorite_job(job.id)">
             Favorite
           </button>
         </div>

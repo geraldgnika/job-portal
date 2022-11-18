@@ -14,57 +14,29 @@
         <div class="row g-3">
           <div class="col-12">
             <label for="address" class="form-label">Title</label>
-            <input
-              type="text"
-              class="form-control"
-              id="title"
-              name="title"
-              [(ngModel)]="title"
-            />
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="title" />
           </div>
         </div>
         <div class="row g-3">
           <div class="col-12">
             <label for="address" class="form-label">Description</label>
-            <textarea
-              type="text"
-              class="form-control"
-              id="description"
-              name="description"
-              [(ngModel)]="description"
-              rows="6"
-            ></textarea>
+            <textarea type="text" class="form-control" id="description" name="description" [(ngModel)]="description"
+              rows="6"></textarea>
           </div>
         </div>
         <div class="row g-3">
           <div class="col-12">
             <label for="address" class="form-label">Salary</label>
-            <input
-              type="text"
-              class="form-control"
-              id="salary"
-              name="salary"
-              [(ngModel)]="salary"
-            />
+            <input type="text" class="form-control" id="salary" name="salary" [(ngModel)]="salary" />
           </div>
         </div>
         <div class="row g-3">
           <div class="col-12">
             <label for="address" class="form-label">Job Profile</label>
-            <input
-              type="text"
-              class="form-control"
-              id="job_profile"
-              name="job_profile"
-              [(ngModel)]="job_profile"
-            />
+            <input type="text" class="form-control" id="job_profile" name="job_profile" [(ngModel)]="job_profile" />
           </div>
         </div>
-        <button
-          class="w-100 btn btn-primary btn-lg mt-4"
-          type="button"
-          (click)="create_job()"
-        >
+        <button class="w-100 btn btn-primary btn-lg mt-4" type="button" (click)="create_job()">
           Create Job
         </button>
       </div>

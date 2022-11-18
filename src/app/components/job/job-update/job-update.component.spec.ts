@@ -8,9 +8,9 @@ describe('JobUpdateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ JobUpdateComponent ]
+      declarations: [JobUpdateComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(JobUpdateComponent);
     component = fixture.componentInstance;

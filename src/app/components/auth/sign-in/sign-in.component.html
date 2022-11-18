@@ -3,33 +3,17 @@
   <h4 class="text-center mb-4 fw-normal">Sign in to your account</h4>
 
   <div class="form-floating mb-3">
-    <input
-      type="text"
-      class="form-control formControl"
-      id="floatingInput"
-      placeholder="Email address"
-      #email
-      required
-    />
+    <input type="text" class="form-control formControl" id="floatingInput" placeholder="Email address" #email
+      required />
     <label for="floatingInput">Email address</label>
   </div>
   <div class="form-floating mb-3">
-    <input
-      class="form-control formControl"
-      id="floatingPassword"
-      type="password"
-      placeholder="Password"
-      #password
-      required
-    />
+    <input class="form-control formControl" id="floatingPassword" type="password" placeholder="Password" #password
+      required />
     <label for="floatingPassword">Password</label>
   </div>
 
-  <button
-    class="w-100 btn btn-lg btn-primary"
-    type="submit"
-    (click)="authService.sign_in(email.value, password.value)"
-  >
+  <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="authService.sign_in(email.value, password.value)">
     Sign in
   </button>
   <p class="mt-5 mb-3 text-muted text-center">

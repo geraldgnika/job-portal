@@ -11,54 +11,29 @@
           <div class="row g-3">
             <div class="col-12">
               <label for="address" class="form-label">Title</label>
-              <input
-                type="text"
-                class="form-control"
-                formControlName="title"
-                name="title"
-                [(ngModel)]="job.title"
-                required
-              />
+              <input type="text" class="form-control" formControlName="title" name="title" [(ngModel)]="job.title"
+                required />
             </div>
           </div>
           <div class="row g-3">
             <div class="col-12">
               <label for="address" class="form-label">Description</label>
-              <textarea
-                type="text"
-                class="form-control"
-                formControlName="description"
-                name="description"
-                [(ngModel)]="job.description"
-                rows="6"
-                required
-              ></textarea>
+              <textarea type="text" class="form-control" formControlName="description" name="description"
+                [(ngModel)]="job.description" rows="6" required></textarea>
             </div>
           </div>
           <div class="row g-3">
             <div class="col-12">
               <label for="address" class="form-label">Salary</label>
-              <input
-                type="text"
-                class="form-control"
-                formControlName="salary"
-                name="salary"
-                [(ngModel)]="job.salary"
-                required
-              />
+              <input type="text" class="form-control" formControlName="salary" name="salary" [(ngModel)]="job.salary"
+                required />
             </div>
           </div>
           <div class="row g-3">
             <div class="col-12">
               <label for="address" class="form-label">Job Profile</label>
-              <input
-                type="text"
-                class="form-control"
-                formControlName="job_profile"
-                name="job_profile"
-                [(ngModel)]="job.job_profile"
-                required
-              />
+              <input type="text" class="form-control" formControlName="job_profile" name="job_profile"
+                [(ngModel)]="job.job_profile" required />
             </div>
           </div>
           <button class="w-100 btn btn-primary btn-lg mt-4" type="submit">
@@ -66,11 +41,7 @@
           </button>
           <div class="d-flex mt-4">
             <div class="mb-5">
-              <span
-                class="btn btn-outline-secondary btn-lg px-4"
-                (click)="goBack()"
-                >Go Back</span
-              >
+              <span class="btn btn-outline-secondary btn-lg px-4" (click)="goBack()">Go Back</span>
             </div>
           </div>
         </div>
