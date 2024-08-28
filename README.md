@@ -1,1 +1,3 @@
-A simple Angular CRUD functionality with authentication, with a back end in Firebase.
+# JobPortal
+
+A job application system, where recruiters create job offers and seekers apply for jobs and navigate through job listings, developed in Angular + Google Firebase.
